@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kanit:ital,wght@0,300;0,400;1,300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+	--black: #0b0b0c;
+	--gray: #686767;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+*::selection {
+	background-color: var(--black);
+	color: white;
+}
+
+body {
+	font-size: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2.5rem;
+	background: #aaaaaa;
+}
+
+a {
+	color: var(--black);
+}
+
+a:hover {
+	color: #038f91;
+}
+
+h1 {
+	font-size: 3rem;
+	text-wrap: nowrap;
+	color: var(--black);
+	line-height: 0.9;
+}
+
+h2 {
+	font-size: 1.778rem;
+	font-weight: 600;
+	text-wrap: nowrap;
+	color: var(--black);
+}
+
+h3 {
+	font-size: 1.75rem;
+	font-weight: 700;
+	margin: 1.5rem 0 0.5rem;
+	color: var(--gray);
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 1.5rem;
+}
+
+h5 {
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+address {
+	font-style: normal;
+}
+
+.cv {
+	position: relative;
+	width: 100%;
+	max-width: 65rem;
+	min-height: 80rem;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	box-shadow: 0 35px 55px rgba(0, 0, 0, 0.2);
+}
+
+.cv-left {
+	background-color: #bbbbbb;
+	padding: 4rem;
+	width: 26.5rem;
+}
+
+.contact {
+	display: flex;
+	font-size: 1.2rem;
+	margin: 0.1rem 0;
+}
+
+.contact svg {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.contact-value {
+	margin: 0 0 0 0.5rem;
+}
+
+.skill {
+	margin-bottom: 0.4rem;
+	font-size: 1.2rem;
+	text-wrap: word;
+}
+
+.project {
+	font-size: 1.2rem;
+	margin-bottom: 0.4rem;
+}
+
+.project-name {
+	font-weight: 600;
+}
+
+.cv-right {
+	padding: 3.2rem 4rem 4rem 4rem;
+	background-color: #cccccc;
+}
+
+.experience {
+	font-size: 1.2rem;
+}
+
+.experience-place {
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+}
+
+.experience-time {
+	font-weight: 500;
+	margin-top: .5rem;
+}
+
+.experience-title {
+	font-style: italic;
+}
+
+.experience-description {
+	margin: .5rem 0;
+}
+
+.experience-list ul {
+	margin: .2rem 0;
+}
+
+@media (max-width: 575px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	.cv {
+		display: block;
+	}
+	.cv-left,
+	.cv-right {
+		width: auto;
+		padding: 1rem;
+	}
+	.contact {
+		display: flex;
+	}
+}
