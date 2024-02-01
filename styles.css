@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+	--font-primary: #0b0b0c;
+	--bg-primary: #aaaaaa;
+	--bg-secondary: #686767;
+	--cv-bg-primary: #cccccc;
+	--cv-bg-secondary: #bbbbbb;
+	--link-hover: #038f91;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2.5rem;
+	background: var(--bg-primary);
+	font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+	font-size: 3rem;
+	text-wrap: nowrap;
+	color: var(--black);
+	line-height: 0.9;
+}
+
+h2 {
+	font-size: 1.778rem;
+	font-weight: 600;
+	text-wrap: nowrap;
+	color: var(--black);
+}
+
+h3 {
+	font-size: 1.75rem;
+	font-weight: 700;
+	margin: 1.5rem 0 0.5rem 0;
+	color: var(--bg-secondary);
+}
+
+h4 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin-bottom: 1.5rem;
+}
+
+h5 {
+	font-size: 1.4rem;
+	font-weight: 500;
+}
+
+.cv {
+	width: 100%;
+	display: grid;
+	aspect-ratio: 210 / 297;
+	max-width: 80rem;
+	grid-template-columns: 1fr 2fr;
+	box-shadow: 0 35px 55px var(--bg-secondary);
+}
+
+.cv::selection {
+	background-color: var(--font-primary);
+	color: white;
+}
+
+.cv-left {
+	background-color: var(--cv-bg-secondary);
+	padding: 3rem;
+}
+
+.contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	gap: .1rem;
+}
+
+.contact {
+	font-style: normal;
+	padding: 0.2rem;
+	color: var(--black);
+	transition: color 150ms;
+}
+
+.contact:hover {
+	color: var(--link-hover);
+}
+
+.skill {
+	margin-bottom: 0.4rem;
+	text-wrap: word;
+}
+
+.project {
+	margin-bottom: 0.4rem;
+}
+
+.project-name {
+	font-weight: 600;
+}
+
+.cv-right {
+	padding: 3rem;
+	background-color: var(--cv-bg-primary);
+}
+
+.summary > h3 {
+	margin: 0;
+}
+
+.experience-type {
+	padding: 1rem 2.8rem;
+	margin-inline:-2.8rem;
+	margin-top: 1rem;
+	background-color: var(--bg-secondary);
+	color: white;
+	display: flex;
+	justify-content: space-between;
+}
+
+.experience-separator {
+	font-weight: 600;
+	margin: .5rem 0;
+}
+
+.experience-place {
+	font-weight: 600;
+	margin-bottom: 0.25rem;
+}
+
+.experience-time {
+	font-weight: 500;
+	margin-top: .5rem;
+}
+
+.experience-title {
+	margin: .5rem 0;
+}
+
+.experience-title > span {
+	font-weight: 600;
+}
+
+@media (max-width: 575px) {
+	body {
+		margin: 0;
+		padding: 0;
+	}
+	.cv {
+		display: block;
+	}
+	.cv-left,
+	.cv-right {
+		width: auto;
+	}
+	.contact {
+		display: flex;
+	}
+}
